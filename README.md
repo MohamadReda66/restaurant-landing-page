@@ -14,7 +14,7 @@ A modern Arabic landing page for a restaurant built using HTML, CSS, and JavaScr
 - JavaScript
 
 ## 🌐 Live Demo
-https://username.github.io/restaurant-landing-page
+https://mohamadreda66.github.io/restaurant-landing-page/
 
 ## 👨‍💻 Author
 Mohamed Reda
