@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم الذواقة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo"><i class="fa-solid fa-utensils"></i> الذواقة</h1>
+            <ul class="nav-links">
+                <li><a href="#hero">الرئيسية</a></li>
+                <li><a href="#menu">القائمة</a></li>
+                <li><a href="#offers">العروض</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <div class="menu-btn" id="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero">
+        <div class="hero-content reveal">
+            <h2>أشهى المأكولات بأجود المكونات</h2>
+            <p>تجربة طعام لا تُنسى تأخذك في رحلة من المذاق الأصيل.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">اطلب الآن</a>
+                <a href="#contact" class="btn btn-outline">احجز طاولة</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="menu" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">قائمة الطعام</h2>
+            <div class="grid-container">
+                <div class="card reveal">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=600&auto=format&fit=crop" alt="بيتزا">
+                    <div class="card-content">
+                        <h3>بيتزا مارغريتا</h3>
+                        <p>صلصة الطماطم الطازجة، جبنة الموزاريلا، والريحان.</p>
+                        <span class="price">45 ريال</span>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=600&auto=format&fit=crop" alt="برجر">
+                    <div class="card-content">
+                        <h3>برجر كلاسيك</h3>
+                        <p>لحم بقري مشوي، خس، طماطم، جبن شيدر مع صوص خاص.</p>
+                        <span class="price">35 ريال</span>
+                    </div>
+                </div>
+                <div class="card reveal">
+                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600&auto=format&fit=crop" alt="مشروبات">
+                    <div class="card-content">
+                        <h3>موهيتو منعش</h3>
+                        <p>ليمون، نعناع، وصودا مع ثلج مبشور.</p>
+                        <span class="price">15 ريال</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="offers" class="section bg-light">
+        <div class="container reveal">
+            <div class="offers-content">
+                <div class="offer-text">
+                    <h2 class="section-title">عروض اليوم الخاصة</h2>
+                    <h3>وجبة التوفير العائلية</h3>
+                    <p>احصل على 2 بيتزا حجم كبير، 2 برجر، ومشروب عائلي بخصم 30% لفترة محدودة.</p>
+                    <a href="#contact" class="btn btn-primary">احصل على العرض</a>
+                </div>
+                <div class="offer-image">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop" alt="عرض خاص">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container text-center reveal">
+            <h2 class="section-title">من نحن</h2>
+            <p class="about-text">
+                في "مطعم الذواقة"، نؤمن بأن الطعام هو لغة الحب. بدأنا رحلتنا بشغف لتقديم أطباق تمزج بين الأصالة والابتكار. 
+                نستخدم أفضل المكونات الطازجة لنقدم لكم تجربة استثنائية ترضي جميع الأذواق في أجواء دافئة وعائلية.
+            </p>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title reveal">آراء عملائنا</h2>
+            <div class="grid-container">
+                <div class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"أفضل برجر تذوقته على الإطلاق! الخدمة ممتازة والمكان راقي جداً."</p>
+                    <h4>- أحمد محمد</h4>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"البيتزا لديهم خيالية وتذكرني بطعم البيتزا الإيطالية الأصيلة. أنصح به بشدة."</p>
+                    <h4>- سارة علي</h4>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="stars">★★★★☆</div>
+                    <p>"مكان رائع لتناول العشاء مع العائلة. العروض التوفيرية ممتازة."</p>
+                    <h4>- خالد محمود</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container reveal">
+            <h2 class="section-title">تواصل معنا</h2>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <h3>رقم الهاتف</h3>
+                    <p>+966 12 345 6789</p>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <h3>البريد الإلكتروني</h3>
+                    <p>reda28112005@gmail.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>العنوان</h3>
+                    <p>شارع التحلية، الرياض، المملكة العربية السعودية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <button id="backToTop" title="الرجوع للأعلى">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

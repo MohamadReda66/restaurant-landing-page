@@ -1,0 +1,468 @@
+/* style.css */
+
+/* --- المتغيرات (Variables) --- */
+:root {
+    --primary-color: #e63946; /* أحمر يعبر عن الشهية */
+    --secondary-color: #f4a261; /* برتقالي دافئ */
+    --accent-color: #e9c46a; /* ذهبي */
+    --dark-color: #1d3557;
+    --text-dark: #333333;
+    --light-color: #fdfaf6;
+    --white: #ffffff;
+    --transition: all 0.3s ease-in-out;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* --- الإعدادات العامة --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.bg-light {
+    background-color: var(--light-color);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* --- الأزرار --- */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-color);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* --- شريط التنقل (Navbar) --- */
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: var(--transition);
+}
+
+#navbar.scrolled {
+    background: var(--white);
+    padding: 15px 0;
+    box-shadow: var(--shadow);
+}
+
+#navbar.scrolled .logo,
+#navbar.scrolled .nav-links a,
+#navbar.scrolled .menu-btn {
+    color: var(--text-dark);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.logo i {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    transition: var(--transition);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+/* --- قسم البطل (Hero Section) --- */
+#hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding-top: 80px;
+}
+
+.hero-content h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* --- نظام الشبكة (Grid) --- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* --- البطاقات (Cards) --- */
+.card {
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.card-content p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.price {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+/* --- قسم العروض (Offers) --- */
+.offers-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.offer-text {
+    flex: 1;
+}
+
+.offer-text h3 {
+    font-size: 2rem;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.offer-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.offer-image {
+    flex: 1;
+}
+
+.offer-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
+
+/* --- من نحن (About) --- */
+.about-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* --- آراء العملاء (Testimonials) --- */
+.testimonial-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.stars {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.testimonial-card h4 {
+    color: var(--primary-color);
+}
+
+/* --- التواصل (Contact) --- */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.info-item {
+    flex: 1;
+    min-width: 250px;
+    padding: 30px;
+    background: var(--light-color);
+    border-radius: 10px;
+    transition: var(--transition);
+}
+
+.info-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.info-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.info-item h3 {
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+/* --- التذييل (Footer) --- */
+footer {
+    background-color: var(--dark-color);
+    color: var(--white);
+    padding: 20px 0;
+}
+
+/* --- زر الرجوع للأعلى --- */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    display: none; /* مخفي افتراضياً */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: var(--transition);
+}
+
+#backToTop:hover {
+    background-color: var(--dark-color);
+    transform: translateY(-3px);
+}
+
+/* --- تأثيرات الحركة (Animations) --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-in-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- التجاوب (Media Queries) --- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background-color: var(--white);
+        padding: 20px;
+        text-align: center;
+        box-shadow: var(--shadow);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        color: var(--text-dark);
+        display: block;
+        padding: 10px 0;
+    }
+
+    #navbar.scrolled .logo,
+    .logo {
+        color: var(--text-dark); /* لضمان وضوح الشعار في الموبايل */
+    }
+    
+    .menu-btn {
+        display: block;
+        color: var(--text-dark);
+    }
+
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .offers-content {
+        flex-direction: column;
+    }
+}
